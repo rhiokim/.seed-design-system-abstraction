@@ -1,0 +1,28 @@
+{
+  "name": "design-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --config ./scripts/webpack.dev.config.js",
+    "theo": "theo ./src/tokens/tokens.yml --transform web --format map.scss,scss,styl,raw.json,json --dest ./src/assets/tokens",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "theo": "^7.0.1"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.5.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "portfinder": "^1.0.13",
+    "webpack": "^4.14.0",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.3"
+  }
+}

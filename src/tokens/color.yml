@@ -1,0 +1,87 @@
+#
+# COLOR TOKENS
+# Use these tokens to set a color.
+# For reference, see http://hslpicker.com/
+#
+# To make things a little simpler for your team,
+# utilize both global & local tokens for colors.
+#
+
+aliases:
+  primary:
+    value: "211, 100%"
+  secondary:
+    value: "207, 8%"
+  success:
+    value: "133, 61%"
+  danger:
+    value: "355, 70%"
+  warning:
+    value: "43, 100%"
+  info:
+    value: "188, 77%"
+  light:
+    value: "210, 17%"
+  dark:
+    value: "213, 23%"
+props:
+  color_primary_darker:
+    value: "hsla({!primary}, 33%, 1)"
+    category: color_group_1
+  color_primary_dark:
+    value: "hsla({!primary}, 43%, 1)"
+    category: color_group_1
+  color_primary:
+    value: "hsla({!primary}, 50%, 1)"
+    category: color_group_1
+  color_primary_light:
+    value: "hsla({!primary}, 63%, 1)"
+    category: color_group_1
+  color_primary_lighter:
+    value: "hsla({!primary}, 75%, 1)"
+    category: color_group_1
+
+  color_secondary_darker:
+    value: "hsla({!secondary}, 35%, 1)"
+    category: color_group_2
+  color_secondary_dark:
+    value: "hsla({!secondary}, 45%, 1)"
+    category: color_group_2
+  color_secondary:
+    value: "hsla({!secondary}, 45%, 1)"
+    category: color_group_2
+  color_secondary_light:
+    value: "hsla({!secondary}, 65%, 1)"
+    category: color_group_2
+  color_secondary_lighter:
+    value: "hsla({!secondary}, 75%, 1)"
+    category: color_group_2
+
+  color_success_darker:
+    value: "hsla({!success}, 34%, 1)"
+    category: color_group_3
+  color_success_dark:
+    value: "hsla({!success}, 44%, 1)"
+    category: color_group_3
+  color_success:
+    value: "hsla({!success}, 54%, 1)"
+    category: color_group_3
+  color_success_light:
+    value: "hsla({!success}, 64%, 1)"
+    category: color_group_3
+  color_success_lighter:
+    value: "hsla({!success}, 74%, 1)"
+    category: color_group_3
+
+  color_danger:
+    value: "hsla({!danger}, 15%, 1)"
+    category: color_group_4
+  color_warning:
+    value: "{!warning}"
+    category: color_group_4
+  color_info:
+    value: "{!info}"
+    category: color_group_4
+global:
+  type: color
+  category: color
