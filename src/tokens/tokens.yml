@@ -4,7 +4,7 @@
 
 imports:
   - ./color.yml
-  # - ./font-size.yml
+  - ./font-size.yml
   - ./font.yml
   # - ./opacity.yml
   - ./size.yml
@@ -13,9 +13,9 @@ imports:
   # - ./media-query.yml
   # - ./box-shadow.yml
   # - ./letter-spacing.yml
-  # - ./border-radius.yml
-  # - ./spacing.yml
-  # - ./line-height.yml
+  - ./border-radius.yml
+  - ./spacing.yml
+  - ./line-height.yml
 global:
   type: global
   category: all

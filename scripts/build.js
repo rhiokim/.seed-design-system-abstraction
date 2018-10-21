@@ -1,4 +1,5 @@
 "use strict"
+
 process.env.NODE_ENV = "production"
 
 const rm = require("rimraf")

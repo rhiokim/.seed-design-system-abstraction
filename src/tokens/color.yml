@@ -11,19 +11,39 @@ aliases:
   primary:
     value: "211, 100%"
   secondary:
-    value: "207, 8%"
+    value: "208, 7%"
   success:
-    value: "133, 61%"
-  danger:
-    value: "355, 70%"
-  warning:
-    value: "43, 100%"
+    value: "134, 61%"
   info:
-    value: "188, 77%"
-  light:
-    value: "210, 17%"
-  dark:
-    value: "213, 23%"
+    value: "188, 78%"
+  warning:
+    value: "45, 100%"
+  danger:
+    value: "354, 70%"
+  bule:
+    value: "211, 100%"
+  indigo:
+    value: "263, 90%"
+  purple:
+    value: "261, 51%"
+  pink:
+    value: "332, 79%"
+  red:
+    value: "354, 70%"
+  orange:
+    value: "27, 98%"
+  yellow:
+    value: "45, 100%"
+  green:
+    value: "134, 61%"
+  teal:
+    value: "162, 73%"
+  white:
+    value: "#fff"
+  gray:
+    value: "208, 7%"
+  cyan:
+    value: "188, 78%"
 props:
   color_primary_darker:
     value: "hsla({!primary}, 33%, 1)"
@@ -32,7 +52,7 @@ props:
     value: "hsla({!primary}, 43%, 1)"
     category: color_group_1
   color_primary:
-    value: "hsla({!primary}, 50%, 1)"
+    value: "hsla({!primary}, 53%, 1)"
     category: color_group_1
   color_primary_light:
     value: "hsla({!primary}, 63%, 1)"
@@ -48,7 +68,7 @@ props:
     value: "hsla({!secondary}, 45%, 1)"
     category: color_group_2
   color_secondary:
-    value: "hsla({!secondary}, 45%, 1)"
+    value: "hsla({!secondary}, 52%, 1)"
     category: color_group_2
   color_secondary_light:
     value: "hsla({!secondary}, 65%, 1)"
@@ -73,15 +93,25 @@ props:
     value: "hsla({!success}, 74%, 1)"
     category: color_group_3
 
-  color_danger:
-    value: "hsla({!danger}, 15%, 1)"
+  color_warning_darker:
+    value: "hsla({!warning}, 34%, 1)"
+    category: color_group_4
+  color_warning_dark:
+    value: "hsla({!warning}, 44%, 1)"
     category: color_group_4
   color_warning:
-    value: "{!warning}"
+    value: "hsla({!warning}, 54%, 1)"
     category: color_group_4
-  color_info:
-    value: "{!info}"
+  color_warning_light:
+    value: "hsla({!warning}, 64%, 1)"
     category: color_group_4
+  color_warning_lighter:
+    value: "hsla({!warning}, 74%, 1)"
+    category: color_group_4
+
+  color_white:
+    value: "{!white}"
+    catgory: color_group_5
 global:
   type: color
   category: color

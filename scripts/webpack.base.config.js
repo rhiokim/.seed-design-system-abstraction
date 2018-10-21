@@ -1,8 +1,10 @@
 "use strict"
+
 const path = require("path")
 const utils = require("./utils")
 const config = require("../config")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const { VueLoaderPlugin } = require("vue-loader")
 
 function resolve(dir) {
   return path.join(__dirname, "..", dir)
@@ -20,25 +22,43 @@ module.exports = {
     publicPath: process.env.NODE_ENV === "production" ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
   },
   resolve: {
-    extensions: [".js", ".json"],
+    extensions: [".js", ".vue", ".json"],
     alias: {
+      vue$: "vue/dist/vue.esm.js",
       "@": resolve("src"),
     },
   },
   module: {
     rules: [
       {
+        test: /\.vue$/,
+        loader: "vue-loader",
+        options: {
+          cacheBusting: config.dev.cacheBusting,
+          transformAssetUrls: {
+            video: ["src", "poster"],
+            source: "src",
+            img: "src",
+            image: "xlink:href",
+          },
+        },
+      },
+      {
         test: /\.js$/,
         loader: "babel-loader",
         include: [resolve("docs"), resolve("src"), resolve("test"), resolve("node_modules/webpack-dev-server/client")],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        test: /\.(png|jpe?g|gif)(\?.*)?$/,
         loader: "url-loader",
         options: {
           limit: 10000,
           name: utils.assetsPath("img/[name].[hash:7].[ext]"),
         },
+      },
+      {
+        test: /\.svg$/,
+        loader: "html-loader",
       },
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
@@ -58,7 +78,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [/*new VueLoaderPlugin(), */new MiniCssExtractPlugin("style.css")],
+  plugins: [new VueLoaderPlugin(), new MiniCssExtractPlugin("style.css")],
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
     // source contains it (although only uses it if it's native).
@@ -70,5 +90,5 @@ module.exports = {
     net: "empty",
     tls: "empty",
     child_process: "empty",
-  },
+  }
 }
